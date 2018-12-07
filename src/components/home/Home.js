@@ -5,6 +5,7 @@ import data from "../../data";
 import PostList from "../posts/post_list/PostList";
 import SinglePost from "../posts/single_post/SinglePost";
 import Nav from "../nav/Nav";
+import TagList from "../nav/tags/TagList";
 
 class Home extends React.Component {
 
@@ -40,7 +41,6 @@ class Home extends React.Component {
     SetCurrentPost = post => {
         this.setState({currentPost: post});
     }
-
     render() {
 
         const { currentPost } = this.state;
@@ -50,6 +50,7 @@ class Home extends React.Component {
                 <HomeWrapper>
                     <MaxWidthWrapper>
                         <Nav></Nav>
+                        <TagList tags={data.tags}/>
                         <Route exact path="/" render={() => <PostList posts={data.posts} SetCurrentPost={this.SetCurrentPost} ></PostList>}/>
                         <Route path="/post/:id" render={() => <SinglePost currentPost={currentPost}></SinglePost>}/>
                     </MaxWidthWrapper>

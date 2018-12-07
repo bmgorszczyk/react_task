@@ -1,22 +1,31 @@
 import React from "react";
 import styled from "styled-components";
+import { withRouter } from "react-router-dom";
 import logo from "../../img/logo.svg";
 
-const Nav = () => {
+const Nav = ({ location, history}) => {
+
+    let routeBtn, rightBtn;
+
+    if(location.pathname === "/") {
+        routeBtn = <RouteBtn onClick={history.goBack} ><RouteBtnIcon className="fa fa-bars" /></RouteBtn>;
+        rightBtn = <RightBtn><RightBtnIcon className="fa fa-search" /></RightBtn>
+    }
+    else {
+        routeBtn = <RouteBtn onClick={history.goBack}><RouteBtnIcon className="fa fa-arrow-left" /></RouteBtn>;
+        rightBtn = <RightBtn><RightBtnIcon className="fa fa-share-alt" /></RightBtn>
+    }
+
     return (
         <Navigation>
-            <HamburgerBtn>
-                <BarsIcon className="fa fa-bars" />
-            </HamburgerBtn>
+            {routeBtn}
             <Logo src={logo} alt="Logo"/>
-            <SearchBtn>
-                <SearchIcon className="fa fa-search" />
-            </SearchBtn>
+            {rightBtn}
         </Navigation>
     );
 }
 
-export default Nav;
+export default withRouter(Nav);
 
 const Navigation = styled.div`
   padding: 0 25px;
@@ -25,7 +34,7 @@ const Navigation = styled.div`
   position: relative;
 `
 
-const HamburgerBtn = styled.button`
+const RouteBtn = styled.button`
     background: none;
     border: none;
     position: absolute; 
@@ -36,9 +45,10 @@ const HamburgerBtn = styled.button`
     outline: none;
 `
 
-const BarsIcon = styled.span`
-    font-size: 30px;
+const RouteBtnIcon = styled.span`
+    font-size: 24px;
     color: black;
+    font-weight: normal;
 `
 
 const Logo = styled.img`
@@ -48,7 +58,7 @@ const Logo = styled.img`
     top: -14px;
 `
 
-const SearchBtn = styled.span`
+const RightBtn = styled.button`
     background: none;
     border: none;
     position: absolute; 
@@ -59,7 +69,8 @@ const SearchBtn = styled.span`
     outline: none;
 `
 
-const SearchIcon = styled.span`
-    font-size: 28px;
+const RightBtnIcon = styled.span`
+    font-size: 24px;
     color: black;
+    font-weight: normal;
 `
