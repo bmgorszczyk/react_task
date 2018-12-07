@@ -20,7 +20,6 @@ TagList.propTypes = {
 export default TagList;
 
 const Tags = styled.div`
-    padding: 0 20px;
     display: flex;
     overflow: auto;
 `
