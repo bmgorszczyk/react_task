@@ -1,10 +1,15 @@
 import React from "react";
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Tag = ({ tag }) => {
     return (
        <SingleTag href="#">#{ tag }</SingleTag>
     );
+}
+
+Tag.propTypes = {
+    tag: PropTypes.string
 }
 
 export default Tag;

@@ -1,8 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 import PostAuthor from "./PostAuthor";
+import PropTypes from "prop-types";
 
 class SinglePost extends React.Component {
+
+    static Prototypes = {
+        currentPost: PropTypes.shape({
+            category: PropTypes.string,
+            title: PropTypes.string,
+            image: PropTypes.shape({
+                url: PropTypes.string,
+                alt: PropTypes.string
+            }),
+            content: PropTypes.string,
+            author: PropTypes.string,
+            authorAvatar: PropTypes.shape({
+                url: PropTypes.string,
+                alt: PropTypes.string
+            })
+        }),
+    }
 
     constructor(props) {
         super(props);

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const PostListItem = ({ id, post, SetCurrentPost}) => {
     return (
@@ -14,6 +15,25 @@ const PostListItem = ({ id, post, SetCurrentPost}) => {
             </SLink>
         </PostWrapper>
     );
+}
+
+PostListItem.propTypes = {
+    id: PropTypes.number,
+    post: PropTypes.shape({
+        category: PropTypes.string,
+        title: PropTypes.string,
+        image: PropTypes.shape({
+            url: PropTypes.string,
+            alt: PropTypes.string
+        }),
+        content: PropTypes.string,
+        author: PropTypes.string,
+        authorAvatar: PropTypes.shape({
+            url: PropTypes.string,
+            alt: PropTypes.string
+        })
+    }),
+    SetCurrentPost: PropTypes.func
 }
 
 const SLink = styled(Link)`

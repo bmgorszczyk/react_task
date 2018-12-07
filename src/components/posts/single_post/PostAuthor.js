@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const PostAuthor = ({ author, authorAvatar }) => {
     return (
@@ -11,6 +12,14 @@ const PostAuthor = ({ author, authorAvatar }) => {
             </AuthorBy>
         </AuthorWrapper>
     );
+}
+
+PostAuthor.propTypes = {
+    author: PropTypes.string,
+    authorAvatar: PropTypes.shape({
+        url: PropTypes.string,
+        alt: PropTypes.string
+    })
 }
 
 export default PostAuthor;

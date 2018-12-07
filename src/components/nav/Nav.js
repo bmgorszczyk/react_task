@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 import { withRouter } from "react-router-dom";
 import logo from "../../img/logo.svg";
 
@@ -23,6 +24,11 @@ const Nav = ({ location, history}) => {
             {rightBtn}
         </Navigation>
     );
+}
+
+Nav.propTypes = {
+    location: PropTypes.object, // i will not deep check this router internal objects
+    history: PropTypes.object
 }
 
 export default withRouter(Nav);

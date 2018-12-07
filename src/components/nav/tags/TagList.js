@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Tag from "./Tag";
 
 const TagList = ({ tags }) => {
@@ -10,6 +11,10 @@ const TagList = ({ tags }) => {
            })}
        </Tags>
     );
+}
+
+TagList.propTypes = {
+    tags: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default TagList;

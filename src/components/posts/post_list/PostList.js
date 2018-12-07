@@ -1,6 +1,7 @@
 import React from "react";
 import PostListItem from "./PostListItem";
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const PostList = ({ posts, SetCurrentPost }) => {
     return (
@@ -15,6 +16,26 @@ const PostList = ({ posts, SetCurrentPost }) => {
             ))}
         </Wrapper>
     );
+}
+
+PostList.propTypes = {
+    posts: PropTypes.arrayOf(
+        PropTypes.shape({
+            category: PropTypes.string,
+            title: PropTypes.string,
+            image: PropTypes.shape({
+                url: PropTypes.string,
+                alt: PropTypes.string
+            }),
+            content: PropTypes.string,
+            author: PropTypes.string,
+            authorAvatar: PropTypes.shape({
+                url: PropTypes.string,
+                alt: PropTypes.string
+            })
+        })
+    ),
+    SetCurrentPost: PropTypes.func
 }
 
 export default PostList;
