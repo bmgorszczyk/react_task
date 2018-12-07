@@ -1,0 +1,64 @@
+{
+    "posts": [
+        { 
+            "category": "US", 
+            "subcategory": "Sub", 
+            "title": "Povert To Empowerment In Chicago",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "author": "Betty Eghan",
+            "authorAvatar": {
+                "url": "https://images.theconversation.com/files/228296/original/file-20180718-142435-1v01jtj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop", 
+                "alt": "Author avatar"
+            },
+            "image": {
+                "url": "https://images.theconversation.com/files/228296/original/file-20180718-142435-1v01jtj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop", 
+                "alt": "aaaa"
+            }
+        },
+        { 
+            "category": "Politics", 
+            "subcategory": "Sub", 
+            "title": "Divided American Lives During War",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "author": "Jon Doe",
+            "authorAvatar": {
+                "url": "https://images.theconversation.com/files/228296/original/file-20180718-142435-1v01jtj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop", 
+                "alt": "Author avatar"
+            },
+            "image": {
+                "url": "https://images.theconversation.com/files/228296/original/file-20180718-142435-1v01jtj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop", 
+                "alt": "aaaa"
+            }
+        },
+        { 
+            "category": "Tech", 
+            "subcategory": "Sub", 
+            "title": "The Future of Gasoline",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "author": "Jan Kowalski",
+            "authorAvatar": {
+                "url": "https://images.theconversation.com/files/228296/original/file-20180718-142435-1v01jtj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop", 
+                "alt": "Author avatar"
+            },
+            "image": {
+                "url": "https://images.theconversation.com/files/228296/original/file-20180718-142435-1v01jtj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop", 
+                "alt": "aaaa"
+            }
+        },
+        { 
+            "category": "Something", 
+            "subcategory": "Sub", 
+            "title": "Lorem ipsum dolor sit amet",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "author": "Betty Eghan",
+            "authorAvatar": {
+                "url": "https://images.theconversation.com/files/228296/original/file-20180718-142435-1v01jtj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop", 
+                "alt": "Author avatar"
+            },
+            "image": {
+                "url": "https://images.theconversation.com/files/228296/original/file-20180718-142435-1v01jtj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop", 
+                "alt": "aaaa"
+            }
+        }
+    ]
+}
