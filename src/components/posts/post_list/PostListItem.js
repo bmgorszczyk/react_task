@@ -43,22 +43,22 @@ const SLink = styled(Link)`
 `
 
 const Image = styled.img`
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
 `;
 
 const Category = styled.h4`
     text-transform: uppercase;
-    margin: 0 0 15px 0;
-    font-size: 19px;
+    margin: 0 0 10px 0;
+    font-size: 17px;
     color: black;
     font-weight: 700;
 `;
 
 const Title = styled.h3`
     text-align: left;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 500;
     line-height: 30px;
     margin: 5px 0 15px 0;
@@ -84,8 +84,8 @@ const PostWrapper = styled.article`
             margin-bottom: 20px;
         }
         ${Title}{
-            font-size: 34px;
-            line-height: 40px;
+            font-size: 32px;
+            line-height: 38px;
         }
     }
 `;

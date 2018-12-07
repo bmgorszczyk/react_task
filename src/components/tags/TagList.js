@@ -7,7 +7,7 @@ const TagList = ({ tags }) => {
     return (
        <Tags>
            {tags.map(tag => {
-               return <Tag tag={tag}></Tag>
+               return <Tag key={tag} tag={tag}></Tag>
            })}
        </Tags>
     );

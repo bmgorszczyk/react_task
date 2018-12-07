@@ -5,7 +5,6 @@ import data from "../../data";
 import PostList from "../posts/post_list/PostList";
 import SinglePost from "../posts/single_post/SinglePost";
 import Nav from "../nav/Nav";
-import TagList from "../nav/tags/TagList";
 
 class Home extends React.Component {
 
@@ -50,8 +49,7 @@ class Home extends React.Component {
                 <HomeWrapper>
                     <MaxWidthWrapper>
                         <Nav></Nav>
-                        <TagList tags={data.tags}/>
-                        <Route exact path="/" render={() => <PostList posts={data.posts} SetCurrentPost={this.SetCurrentPost} ></PostList>}/>
+                        <Route exact path="/" render={() => <PostList tags={data.tags} posts={data.posts} SetCurrentPost={this.SetCurrentPost} ></PostList>}/>
                         <Route path="/post/:id" render={() => <SinglePost currentPost={currentPost}></SinglePost>}/>
                     </MaxWidthWrapper>
                 </HomeWrapper>
@@ -64,9 +62,12 @@ export default Home;
 
 const HomeWrapper = styled.div`
   background-color: white;
+  position: relative;
+  height: calc(100vh - 20px);
 `;
 
 const MaxWidthWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
+
 `;

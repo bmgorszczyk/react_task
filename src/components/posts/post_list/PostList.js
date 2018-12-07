@@ -1,11 +1,14 @@
 import React from "react";
 import PostListItem from "./PostListItem";
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import posed from "react-pose";
+import TagList from "../../tags/TagList";
 
-const PostList = ({ posts, SetCurrentPost }) => {
+const PostList = ({ posts, SetCurrentPost, tags }) => {
     return (
-        <Wrapper>
+        <SWrapper initialPose="hidden" pose="visible">
+            <TagList tags={tags}/>
             {posts.map((post, i) => (
                 <PostListItem 
                     id={i}
@@ -14,7 +17,7 @@ const PostList = ({ posts, SetCurrentPost }) => {
                     SetCurrentPost={SetCurrentPost}>
                 </PostListItem>
             ))}
-        </Wrapper>
+        </SWrapper>
     );
 }
 
@@ -35,12 +38,22 @@ PostList.propTypes = {
             })
         })
     ),
+    tags: PropTypes.arrayOf(PropTypes.string),
     SetCurrentPost: PropTypes.func
 }
 
 export default PostList;
 
-const Wrapper = styled.div`
+const Wrapper = posed.div({
+    visible: { 
+        opacity: 1
+    },
+    hidden: { 
+        opacity: 0
+    }
+});
+
+const SWrapper = styled(Wrapper)`
   padding: 0 25px;
   box-sizing: border-box;
 `
