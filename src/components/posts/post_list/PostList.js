@@ -20,6 +20,6 @@ const PostList = ({ posts, SetCurrentPost }) => {
 export default PostList;
 
 const Wrapper = styled.div`
-  padding: 25px;
+  padding: 0 25px;
   box-sizing: border-box;
 `
