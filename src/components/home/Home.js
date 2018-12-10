@@ -63,11 +63,10 @@ export default Home;
 const HomeWrapper = styled.div`
   background-color: white;
   position: relative;
-  height: calc(100vh - 20px);
+  overflow: hidden;
 `;
 
 const MaxWidthWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-
 `;

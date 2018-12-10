@@ -27,7 +27,7 @@ const Nav = ({ location, history}) => {
 }
 
 Nav.propTypes = {
-    location: PropTypes.object, // i will not deep check this router internal objects
+    location: PropTypes.object, // i will not deep check this router's internal objects
     history: PropTypes.object
 }
 
